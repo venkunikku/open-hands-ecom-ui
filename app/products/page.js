@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import BurgerMenu from '@/components/Navigation/BurgerMenu';
-import SearchBar from '@/components/Search/SearchBar';
+import Header from '@/components/Navigation/Header';
 
 const dummyProducts = Array.from({ length: 50 }, (_, index) => ({
   id: index + 1,
@@ -16,26 +15,7 @@ const dummyProducts = Array.from({ length: 50 }, (_, index) => ({
 export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex-1 flex items-center justify-between">
-              <div className="flex-shrink-0">
-                <h1 className="text-2xl font-bold text-indigo-600">EcomUI</h1>
-              </div>
-              <div className="hidden md:block flex-1 mx-10">
-                <SearchBar />
-              </div>
-              <div className="md:hidden">
-                <BurgerMenu />
-              </div>
-            </div>
-          </div>
-          <div className="md:hidden py-4">
-            <SearchBar />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow p-6">
